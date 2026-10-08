@@ -1,0 +1,19 @@
+# environment
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# dataset (download from UCI by running Notebook A); keep only the manifest for the md5 check
+data/*
+!data/processed/
+data/processed/*
+!data/processed/manifest.json
+*.zip
+
+# documents and lock files
+*.docx
+~$*
+.~lock*
+
+# local session backups
+_session_*/
