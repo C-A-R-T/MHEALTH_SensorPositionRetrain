@@ -1,0 +1,7 @@
+{
+  "file": "data/processed/mhealth.parquet",
+  "rows": 33148,
+  "columns": 45,
+  "feat_rows": 33148,
+  "md5": "3d81b90d136d90450e7650e80612e8e9"
+}

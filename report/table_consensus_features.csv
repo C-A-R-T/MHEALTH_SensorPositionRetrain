@@ -1,0 +1,8 @@
+,methods_listing_in_top5
+ankle_acc_y_mean,5
+chest_acc_x_mean,5
+wrist_acc_y_mean,5
+ankle_accmag_std,4
+chest_acc_z_mean,4
+wrist_accmag_std,1
+ankle_accmag_mean,1

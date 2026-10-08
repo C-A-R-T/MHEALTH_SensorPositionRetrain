@@ -1,0 +1,25 @@
+# Thu vien cho Notebook A va Notebook B (MHEALTH SensorPositionRetrain)
+# Cai mot lan:  %pip install -r requirements.txt   (chay trong 1 o cua notebook, sau do Restart kernel)
+# Phien ban ghim bang == la phien ban trong .venv da chay thanh cong ca hai notebook (08/10/2026)
+
+# du lieu va SQL
+pandas==3.0.6
+numpy==2.4.6
+pyarrow==25.0.1      # doc/ghi file parquet
+duckdb==1.5.6        # chay sql/queries.sql
+
+# mo hinh
+scikit-learn==1.9.1  # Logistic, SVM, k-NN, cay, RF, ET, HistGB, MLP, permutation
+lightgbm==4.7.0
+xgboost==3.2.0
+
+# giai thich va thong ke
+shap==0.51.0         # TreeSHAP, KernelSHAP
+scipy==1.17.1        # spearmanr, wilcoxon, friedmanchisquare
+
+# hinh
+matplotlib==3.11.2
+
+# chay notebook trong VS Code / Jupyter
+jupyter==1.1.1
+ipykernel==7.4.0
