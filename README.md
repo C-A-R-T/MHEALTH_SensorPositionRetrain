@@ -62,42 +62,47 @@ The dataset is **not included in this repository**; Notebook A downloads it from
 | LightGBM | 0.933 ± 0.053 |
 | Naive baseline (most frequent class) | 0.014 |
 
-The gap between the leading classifiers (below 0.012) is much smaller than the spread between people (about 0.05). A Wilcoxon test between Extra Trees and XGBoost gives p = 0.945. **Which classifier is chosen matters less than who wears the sensors.** The largest errors come from two people whose behaviour differs from the rest (see `report/table_diagnosis.csv`):
+The gap between the leading classifiers (below 0.012) is much smaller than the spread between people (about 0.05). A Wilcoxon test between Extra Trees and XGBoost gives p = 0.945, and an equivalence test (TOST, margin ±0.03) finds most pairs among the top five equivalent (`report/table_rq2_tests.csv`). **Which classifier is chosen matters less than who wears the sensors.** The largest errors come from two people whose behaviour differs from the rest (see `report/table_diagnosis.csv`):
 - Subject 3 sat with the arm hanging, so sitting is predicted as standing.
 - Subject 6 jogged as hard as the others ran.
 
 ### RQ3: Masking overstates feature importance
-Removing the 10 features ranked highest by each method (score with all features: 0.947):
+Removing the 10 features ranked highest by each method (people 8–10 held out, LightGBM, mean over 3 seeds; score with all features: 0.947):
 
 | Method | Masked, not retrained | Retrained (ROAR) |
 |---|---|---|
-| TreeSHAP | 0.370 | 0.932 |
-| KernelSHAP | 0.445 | 0.912 |
-| LIME | 0.312 | 0.933 |
-| Permutation | 0.536 | 0.907 |
-| Gain | 0.373 | 0.948 |
-| Random removal | 0.942 | 0.950 |
+| TreeSHAP | 0.368 | 0.930 |
+| KernelSHAP | 0.464 | 0.923 |
+| LIME | 0.368 | 0.956 |
+| Permutation | 0.500 | 0.905 |
+| Gain | 0.382 | 0.944 |
+| Random removal | 0.937 | 0.951 |
 
-- Masking drops the score to 0.3–0.5, while retraining loses at most 0.04. The reason: the sensors carry overlapping information, so the retrained model recovers it from the remaining features.
+- Masking drops the score to 0.3–0.5, while retraining loses at most about 0.04. The reason: the sensors carry overlapping information, so the retrained model recovers it from the remaining features.
+- The same gap holds on **5 different splits of held-out people and for both LightGBM and Extra Trees**: masked 0.24–0.62 vs retrained 0.88–0.92 (mean over splits); the gap exceeds 0.1 on 5/5 splits for every method except Extra Trees + Permutation (4/5). See `report/table_rq3_roar_splits.csv` and `report/table_rq3_roar_summary.csv`.
 - ROAR **cannot tell** which explanation method is more faithful.
 
-### RQ3: The chest device can be dropped
-| Setting (LightGBM, leave-one-subject-out) | Macro-F1 | Worst person |
-|---|---|---|
-| All 3 positions | 0.934 | 0.867 |
-| **Drop the chest device (acceleration + ECG)** | **0.894** | 0.809 |
-| Drop the wrist | 0.865 | 0.748 |
-| Drop the ankle | 0.851 | 0.742 |
-| Ankle only / chest only / wrist only | 0.792 / 0.786 / 0.749 | 0.53–0.64 |
-| ECG only | 0.118 | 0.053 |
+### RQ3: The chest device costs the least to drop
+Leave-one-subject-out, mean over 10 people and 3 seeds, for three tree models (`report/table_rq3_positions.csv`, figure `report/fig_rq3_positions_3models.png`):
 
-- The explanations give the ankle about 40% of the attribution, the wrist about 36%, the chest about 23% and the ECG about 1%. This order **matches the drop-one-position experiment**.
-- **Practical rule:** wear the ankle and wrist sensors and drop the chest device, at a cost of about 0.04 macro-F1. A single sensor is not enough, because for some people only about half of the activities are then recognised correctly.
+| Setting | LightGBM | Extra Trees | XGBoost |
+|---|---|---|---|
+| All 3 positions | 0.937 | 0.957 | 0.958 |
+| **Drop the chest device (acceleration + ECG)** | **0.896** | **0.932** | **0.900** |
+| Drop the wrist | 0.867 | 0.885 | 0.893 |
+| Drop the ankle | 0.853 | 0.878 | 0.857 |
+| Ankle only / chest only / wrist only | 0.79 / 0.79 / 0.74 | 0.80 / 0.79 / 0.75 | 0.80 / 0.79 / 0.72 |
+| ECG only | 0.120 | 0.118 | 0.122 |
+
+- For all three models, dropping the chest device costs the least (0.026–0.058 macro-F1), and the order chest < wrist ≈ ankle is the same.
+- The cost is **not negligible**: the TOST test does not show equivalence within ±0.03, and the loss is significant for LightGBM and XGBoost (`report/table_rq3_positions_tests.csv`).
+- The explanations give the ankle about 40% of the attribution, the wrist about 36%, the chest about 23% and the ECG about 1%. A model-free baseline (mutual information) and per-feature attribution point the same way (`report/table_rq3_selection_baselines.csv`).
+- **Practical rule (on MHEALTH):** if one position has to go, drop the chest device; it is the smallest loss, not a free one. A single sensor is not enough, because for some people only about half of the activities are then recognised correctly.
 
 ## 5. Limitations
 
 - Only 10 people, so differences below about 0.03 are not reliable enough to draw conclusions.
-- ROAR uses one split (people 8–10) and one model (LightGBM). LightGBM is used because TreeSHAP and Gain need a boosted tree model.
+- Only 10 people: ROAR is repeated on 5 splits and 2 models, but the per-person spread is still large compared with the differences between positions.
 - The features are simple statistics, and there is no thigh sensor, so sitting and standing are easily confused.
 - The ECG feature is the standard deviation of the voltage, **not heart rate**.
 - Model hyperparameters are fixed and have not been tuned.
@@ -115,7 +120,7 @@ pip install -r requirements.txt
 Open the notebooks in VS Code (Jupyter extension) or Jupyter, and run them in this order:
 
 1. **`Notebook_A_MHEALTH_SensorPositionRetrain.ipynb`** (about 15 s, plus downloading the 72 MB dataset): downloads the data, cuts windows, cleans, runs the SQL, draws the RQ1 figure, and writes `data/processed/mhealth.parquet` and `manifest.json`.
-2. **`Notebook_B_MHEALTH_SensorPositionRetrain_executed.ipynb`** (about 22 min on an 8-thread CPU): checks the md5 against the manifest, runs the 10 classifiers and the RQ3 experiments, and draws the SHAP figure.
+2. **`Notebook_B_MHEALTH_SensorPositionRetrain_executed.ipynb`** checks the md5 against the manifest, runs the 10 classifiers and the RQ3 experiments, and draws the SHAP figure. The revised RQ3 experiments (5 ROAR splits, 3 models × 3 seeds for positions) take a few hours; every step saves its results to `report/*.csv` and resumes from them, and RQ2 is loaded from `report/table_rq2_folds.csv` unless `RERUN_RQ2 = True`.
 
 On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90450e7650e80612e8e9`.
 
@@ -129,8 +134,12 @@ On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90
 ├── report/
 │   ├── table_q*.csv, table_rq1_tests.csv          RQ1
 │   ├── table_rq2.csv, table_rq2_folds.csv         RQ2 (mean and per person)
-│   ├── table_rq3_roar.csv                         masking vs retraining
-│   ├── table_rq3_positions.csv                    one position only and drop one position
+│   ├── table_rq2_tests.csv                        RQ2 pairwise tests (Wilcoxon, TOST ±0.03)
+│   ├── table_rq3_roar.csv                         masking vs retraining (people 8–10)
+│   ├── table_rq3_roar_splits.csv, _summary.csv    ROAR on 5 splits × 2 models
+│   ├── table_rq3_positions.csv, _folds.csv        one position only / drop one, 3 models × 3 seeds
+│   ├── table_rq3_positions_tests.csv              position tests (TOST ±0.03)
+│   ├── table_rq3_selection_baselines.csv          mutual information vs attribution vs retrain cost
 │   ├── table_rq3_group_share.csv, table_rq3_methods.csv, table_top10_by_method.csv
 │   ├── table_diagnosis.csv                        causes of the largest errors, with evidence
 │   └── fig_*.png                                  figures
