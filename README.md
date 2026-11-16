@@ -99,10 +99,29 @@ Leave-one-subject-out, mean over 10 people and 3 seeds, for three tree models (`
 - The explanations give the ankle about 40% of the attribution, the wrist about 36%, the chest about 23% and the ECG about 1%. A model-free baseline (mutual information) and per-feature attribution point the same way (`report/table_rq3_selection_baselines.csv`).
 - **Practical rule (on MHEALTH):** if one position has to go, drop the chest device; it is the smallest loss, not a free one. A single sensor is not enough, because for some people only about half of the activities are then recognised correctly.
 
+### External check on PAMAP2 (`Notebook_C_PAMAP2_ExternalCheck_executed.ipynb`)
+PAMAP2 (Reiss and Stricker, 2012, UCI, CC BY 4.0) has the same three positions: dominant wrist, chest and dominant ankle, plus a heart-rate strap on the chest. Same feature recipe (mean and SD of ±16 g acceleration, gyroscope and acceleration magnitude per position, plus heart rate; 44 features), 2 s windows with a 1 s step (19,178 windows), 8 people (subject 109 performed almost none of the protocol), 12 activities. Not every person did every activity, so macro-F1 is averaged over the activities each held-out person performed.
+
+Cost of dropping one position (macro-F1 lost, leave-one-subject-out, mean over people and 3 seeds; `report/table_external_check.csv`):
+
+| Data set | Model | Drop chest device | Drop wrist | Drop ankle |
+|---|---|---|---|---|
+| MHEALTH | LightGBM | **0.042** | 0.070 | 0.084 |
+| MHEALTH | Extra Trees | **0.026** | 0.072 | 0.079 |
+| MHEALTH | XGBoost | **0.058** | 0.065 | 0.101 |
+| PAMAP2 | LightGBM | **0.047** | 0.093 | 0.056 |
+| PAMAP2 | Extra Trees | **0.028** | 0.083 | 0.046 |
+| PAMAP2 | XGBoost | **0.026** | 0.080 | 0.043 |
+
+- On both data sets and for all three models, the chest device is the cheapest position to drop. With all positions, PAMAP2 reaches 0.845–0.880 macro-F1 (figure `report/fig_pamap2_positions_3models.png`).
+- The order of the other two positions differs: on PAMAP2 the wrist matters most, probably because ironing, vacuum cleaning and nordic walking involve the arms.
+- **The explanations and mutual information do not pick the right position on PAMAP2.** Both give the wrist the lowest score (TreeSHAP gives the chest device, chest IMU + heart rate, the largest share; mutual information ranks the ankle first) and would drop the wrist first, yet the wrist is the most expensive position to lose. Only retraining shows that the chest device is the cheapest to drop (`report/pamap2_selection_baselines.csv`).
+- Masking again overstates importance: removing the top 10 features drops the score to 0.35–0.59 when masked and to 0.74–0.84 when retrained (`report/pamap2_roar.csv`; people 106–108 held out, LightGBM and Extra Trees).
+- With 8 people the cost of dropping the chest device is significant only for Extra Trees and unresolved for LightGBM and XGBoost; dropping the wrist is significant for all three (`report/pamap2_positions_tests.csv`).
+
 ## 5. Limitations
 
-- Only 10 people, so differences below about 0.03 are not reliable enough to draw conclusions.
-- Only 10 people: ROAR is repeated on 5 splits and 2 models, but the per-person spread is still large compared with the differences between positions.
+- Two data sets with few people (10 and 8), so differences below about 0.03 are not reliable enough to draw conclusions. ROAR is repeated on 5 splits and 2 models, but the per-person spread is still large compared with the differences between positions.
 - The features are simple statistics, and there is no thigh sensor, so sitting and standing are easily confused.
 - The ECG feature is the standard deviation of the voltage, **not heart rate**.
 - Model hyperparameters are fixed and have not been tuned.
@@ -122,6 +141,8 @@ Open the notebooks in VS Code (Jupyter extension) or Jupyter, and run them in th
 1. **`Notebook_A_MHEALTH_SensorPositionRetrain.ipynb`** (about 15 s, plus downloading the 72 MB dataset): downloads the data, cuts windows, cleans, runs the SQL, draws the RQ1 figure, and writes `data/processed/mhealth.parquet` and `manifest.json`.
 2. **`Notebook_B_MHEALTH_SensorPositionRetrain_executed.ipynb`** checks the md5 against the manifest, runs the 10 classifiers and the RQ3 experiments, and draws the SHAP figure. The revised RQ3 experiments (5 ROAR splits, 3 models × 3 seeds for positions) take a few hours; every step saves its results to `report/*.csv` and resumes from them, and RQ2 is loaded from `report/table_rq2_folds.csv` unless `RERUN_RQ2 = True`.
 
+3. **`Notebook_C_PAMAP2_ExternalCheck_executed.ipynb`** (optional, about 1.5 h on 2 CPU cores): downloads PAMAP2 from UCI (about 690 MB), cuts windows and repeats the position, ROAR, mutual-information and TOST experiments. Results are saved to `report/pamap2_*.csv` and resumed from there.
+
 On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90450e7650e80612e8e9`.
 
 ## 7. Repository layout
@@ -129,6 +150,7 @@ On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90
 ```
 ├── Notebook_A_MHEALTH_SensorPositionRetrain.ipynb            data, cleaning, SQL, RQ1
 ├── Notebook_B_MHEALTH_SensorPositionRetrain_executed.ipynb   classifiers (RQ2), explanations (RQ3)
+├── Notebook_C_PAMAP2_ExternalCheck_executed.ipynb            external check on PAMAP2
 ├── sql/queries.sql                  queries Q1–Q5 (DuckDB)
 ├── data/processed/manifest.json     rows, columns and md5 of the handover file
 ├── report/
@@ -141,6 +163,8 @@ On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90
 │   ├── table_rq3_positions_tests.csv              position tests (TOST ±0.03)
 │   ├── table_rq3_selection_baselines.csv          mutual information vs attribution vs retrain cost
 │   ├── table_rq3_group_share.csv, table_rq3_methods.csv, table_top10_by_method.csv
+│   ├── pamap2_*.csv, fig_pamap2_positions_3models.png   external check on PAMAP2
+│   ├── table_external_check.csv                   MHEALTH vs PAMAP2: cost of dropping each position
 │   ├── table_diagnosis.csv                        causes of the largest errors, with evidence
 │   └── fig_*.png                                  figures
 └── requirements.txt                 library versions that ran both notebooks
@@ -149,6 +173,7 @@ On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90
 ## 8. Key references
 
 - Banos, O., et al. (2014). mHealthDroid: A novel framework for agile development of mobile health applications. *IWAAL 2014*, LNCS 8868, 91–98. https://doi.org/10.1007/978-3-319-13105-4_14
+- Reiss, A., & Stricker, D. (2012). Introducing a new benchmarked dataset for activity monitoring. *ISWC 2012*, 108–109. https://doi.org/10.1109/ISWC.2012.13
 - Hooker, S., Erhan, D., Kindermans, P.-J., & Kim, B. (2019). A benchmark for interpretability methods in deep neural networks. *NeurIPS 32*.
 - Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model predictions. *NeurIPS 30*.
 - Ribeiro, M. T., Singh, S., & Guestrin, C. (2016). "Why should I trust you?": Explaining the predictions of any classifier. *KDD 2016*. https://doi.org/10.1145/2939672.2939778

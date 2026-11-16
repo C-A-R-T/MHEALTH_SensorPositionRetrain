@@ -1,0 +1,649 @@
+model,setting,held_out,seed,macroF1
+LightGBM,all,101,0,0.7749265404303682
+LightGBM,all,101,1,0.78444235725442
+LightGBM,all,101,2,0.7778381743105861
+LightGBM,all,102,0,0.823637566042949
+LightGBM,all,102,1,0.8271403172664962
+LightGBM,all,102,2,0.8059126935579144
+LightGBM,all,103,0,0.9283459127819356
+LightGBM,all,103,1,0.928997736417592
+LightGBM,all,103,2,0.9287141810469032
+LightGBM,all,104,0,0.8120793476499589
+LightGBM,all,104,1,0.8171326150310696
+LightGBM,all,104,2,0.8115176691176217
+LightGBM,all,105,0,0.9034043733080414
+LightGBM,all,105,1,0.9049736936992068
+LightGBM,all,105,2,0.9035507302037574
+LightGBM,all,106,0,0.8283454291256268
+LightGBM,all,106,1,0.8333355019272172
+LightGBM,all,106,2,0.8336542257071246
+LightGBM,all,107,0,0.8946151026372277
+LightGBM,all,107,1,0.8815695671478238
+LightGBM,all,107,2,0.8957436184387242
+LightGBM,all,108,0,0.8497816210467829
+LightGBM,all,108,1,0.8604408851858275
+LightGBM,all,108,2,0.8673000280371105
+LightGBM,drop chest device,101,0,0.7626281165080594
+LightGBM,drop chest device,101,1,0.7698484558157864
+LightGBM,drop chest device,101,2,0.7490821212941947
+LightGBM,drop chest device,102,0,0.8612559950648325
+LightGBM,drop chest device,102,1,0.8580176488030449
+LightGBM,drop chest device,102,2,0.8675401359665752
+LightGBM,drop chest device,103,0,0.8376174511364418
+LightGBM,drop chest device,103,1,0.840796321697052
+LightGBM,drop chest device,103,2,0.8362035784091237
+LightGBM,drop chest device,104,0,0.847686824754288
+LightGBM,drop chest device,104,1,0.8296100523073161
+LightGBM,drop chest device,104,2,0.8294764117538866
+LightGBM,drop chest device,105,0,0.8667470837344827
+LightGBM,drop chest device,105,1,0.854096105370254
+LightGBM,drop chest device,105,2,0.8624004304822347
+LightGBM,drop chest device,106,0,0.8048240449682851
+LightGBM,drop chest device,106,1,0.8056850689463536
+LightGBM,drop chest device,106,2,0.8023401407931138
+LightGBM,drop chest device,107,0,0.9020570590402026
+LightGBM,drop chest device,107,1,0.8937307930150952
+LightGBM,drop chest device,107,2,0.9031282341990892
+LightGBM,drop chest device,108,0,0.6103945875828259
+LightGBM,drop chest device,108,1,0.5768124608519525
+LightGBM,drop chest device,108,2,0.5721563211237262
+LightGBM,drop wrist,101,0,0.6819009868307185
+LightGBM,drop wrist,101,1,0.6859695915454588
+LightGBM,drop wrist,101,2,0.6866492543019396
+LightGBM,drop wrist,102,0,0.603301111837402
+LightGBM,drop wrist,102,1,0.6040520346016549
+LightGBM,drop wrist,102,2,0.6151181405120406
+LightGBM,drop wrist,103,0,0.8548280650132878
+LightGBM,drop wrist,103,1,0.8517157661656454
+LightGBM,drop wrist,103,2,0.849807458367908
+LightGBM,drop wrist,104,0,0.777039164533048
+LightGBM,drop wrist,104,1,0.7684319281076167
+LightGBM,drop wrist,104,2,0.7708157873064787
+LightGBM,drop wrist,105,0,0.8488876143175689
+LightGBM,drop wrist,105,1,0.8504919148358793
+LightGBM,drop wrist,105,2,0.8535218393078714
+LightGBM,drop wrist,106,0,0.7512201788533374
+LightGBM,drop wrist,106,1,0.7508769341728257
+LightGBM,drop wrist,106,2,0.75167433537735
+LightGBM,drop wrist,107,0,0.7628405131222796
+LightGBM,drop wrist,107,1,0.7645586007564692
+LightGBM,drop wrist,107,2,0.767986289510971
+LightGBM,drop wrist,108,0,0.793764031881369
+LightGBM,drop wrist,108,1,0.8008557719673779
+LightGBM,drop wrist,108,2,0.7910782763517955
+LightGBM,drop ankle,101,0,0.7109414719323391
+LightGBM,drop ankle,101,1,0.7118790038561787
+LightGBM,drop ankle,101,2,0.7210072315223663
+LightGBM,drop ankle,102,0,0.5596734590200677
+LightGBM,drop ankle,102,1,0.5621359920082346
+LightGBM,drop ankle,102,2,0.5487047043310093
+LightGBM,drop ankle,103,0,0.9092910936266436
+LightGBM,drop ankle,103,1,0.9143510393413816
+LightGBM,drop ankle,103,2,0.9094346812656368
+LightGBM,drop ankle,104,0,0.7730119890659084
+LightGBM,drop ankle,104,1,0.776570521745297
+LightGBM,drop ankle,104,2,0.7725664198005795
+LightGBM,drop ankle,105,0,0.8748004854872159
+LightGBM,drop ankle,105,1,0.8807549060774633
+LightGBM,drop ankle,105,2,0.8793536689176814
+LightGBM,drop ankle,106,0,0.8037011845705013
+LightGBM,drop ankle,106,1,0.8058335589114746
+LightGBM,drop ankle,106,2,0.8047073779797657
+LightGBM,drop ankle,107,0,0.8687029382405378
+LightGBM,drop ankle,107,1,0.858436052654099
+LightGBM,drop ankle,107,2,0.8552465875006011
+LightGBM,drop ankle,108,0,0.8637278832313718
+LightGBM,drop ankle,108,1,0.893518819562813
+LightGBM,drop ankle,108,2,0.8758218417338207
+LightGBM,only ankle,101,0,0.6823523279176088
+LightGBM,only ankle,101,1,0.6438208655826936
+LightGBM,only ankle,101,2,0.6764877014219813
+LightGBM,only ankle,102,0,0.7244319263907525
+LightGBM,only ankle,102,1,0.7243052372261637
+LightGBM,only ankle,102,2,0.7332587902220303
+LightGBM,only ankle,103,0,0.6651593328235943
+LightGBM,only ankle,103,1,0.664720650239766
+LightGBM,only ankle,103,2,0.6641477944288479
+LightGBM,only ankle,104,0,0.6541658723540279
+LightGBM,only ankle,104,1,0.660748656322679
+LightGBM,only ankle,104,2,0.6665587214347957
+LightGBM,only ankle,105,0,0.6114881592196476
+LightGBM,only ankle,105,1,0.6051581250097106
+LightGBM,only ankle,105,2,0.6103254150222036
+LightGBM,only ankle,106,0,0.6606011215520989
+LightGBM,only ankle,106,1,0.6393225254567155
+LightGBM,only ankle,106,2,0.6532016860139178
+LightGBM,only ankle,107,0,0.7407601618875748
+LightGBM,only ankle,107,1,0.7207466246222325
+LightGBM,only ankle,107,2,0.7228689524861257
+LightGBM,only ankle,108,0,0.4378000320530572
+LightGBM,only ankle,108,1,0.4171938781658982
+LightGBM,only ankle,108,2,0.4240573495606713
+LightGBM,only chest device (IMU + heart rate),101,0,0.6228495389873518
+LightGBM,only chest device (IMU + heart rate),101,1,0.624085965448104
+LightGBM,only chest device (IMU + heart rate),101,2,0.6333087295482108
+LightGBM,only chest device (IMU + heart rate),102,0,0.4188743165292123
+LightGBM,only chest device (IMU + heart rate),102,1,0.408713872826645
+LightGBM,only chest device (IMU + heart rate),102,2,0.4158796821975833
+LightGBM,only chest device (IMU + heart rate),103,0,0.882704310491715
+LightGBM,only chest device (IMU + heart rate),103,1,0.8857462640680969
+LightGBM,only chest device (IMU + heart rate),103,2,0.8851338913559262
+LightGBM,only chest device (IMU + heart rate),104,0,0.7323221445314847
+LightGBM,only chest device (IMU + heart rate),104,1,0.7500171761643124
+LightGBM,only chest device (IMU + heart rate),104,2,0.7462116568498193
+LightGBM,only chest device (IMU + heart rate),105,0,0.8493661766848698
+LightGBM,only chest device (IMU + heart rate),105,1,0.8477987028370166
+LightGBM,only chest device (IMU + heart rate),105,2,0.8465824184433046
+LightGBM,only chest device (IMU + heart rate),106,0,0.7537783438643831
+LightGBM,only chest device (IMU + heart rate),106,1,0.7586821287216626
+LightGBM,only chest device (IMU + heart rate),106,2,0.759153213820765
+LightGBM,only chest device (IMU + heart rate),107,0,0.7126426018306344
+LightGBM,only chest device (IMU + heart rate),107,1,0.716143433226614
+LightGBM,only chest device (IMU + heart rate),107,2,0.7162767309267966
+LightGBM,only chest device (IMU + heart rate),108,0,0.8512762603581637
+LightGBM,only chest device (IMU + heart rate),108,1,0.8458884216400508
+LightGBM,only chest device (IMU + heart rate),108,2,0.8534546208484545
+LightGBM,only wrist,101,0,0.6439488150751358
+LightGBM,only wrist,101,1,0.6530734442470094
+LightGBM,only wrist,101,2,0.633999404004748
+LightGBM,only wrist,102,0,0.779452343988308
+LightGBM,only wrist,102,1,0.7767879652182006
+LightGBM,only wrist,102,2,0.7771232968884477
+LightGBM,only wrist,103,0,0.7608000433053831
+LightGBM,only wrist,103,1,0.7633322778915276
+LightGBM,only wrist,103,2,0.771011002907414
+LightGBM,only wrist,104,0,0.6978227544073359
+LightGBM,only wrist,104,1,0.7129177030655125
+LightGBM,only wrist,104,2,0.7018796856794606
+LightGBM,only wrist,105,0,0.6013824793867211
+LightGBM,only wrist,105,1,0.6064015360879658
+LightGBM,only wrist,105,2,0.6077265157123672
+LightGBM,only wrist,106,0,0.7335688016974501
+LightGBM,only wrist,106,1,0.7329768132470696
+LightGBM,only wrist,106,2,0.7356843844670391
+LightGBM,only wrist,107,0,0.8471703565687783
+LightGBM,only wrist,107,1,0.8457923775626032
+LightGBM,only wrist,107,2,0.8465374595696488
+LightGBM,only wrist,108,0,0.5692363145848692
+LightGBM,only wrist,108,1,0.5537000680937617
+LightGBM,only wrist,108,2,0.5554523341124017
+LightGBM,only chest IMU,101,0,0.6592036193334986
+LightGBM,only chest IMU,101,1,0.6612491620265413
+LightGBM,only chest IMU,101,2,0.6632427688190888
+LightGBM,only chest IMU,102,0,0.4069318958017151
+LightGBM,only chest IMU,102,1,0.4012088869052042
+LightGBM,only chest IMU,102,2,0.3979900116266837
+LightGBM,only chest IMU,103,0,0.866016007909666
+LightGBM,only chest IMU,103,1,0.8657095162221194
+LightGBM,only chest IMU,103,2,0.8679860455327291
+LightGBM,only chest IMU,104,0,0.7551173457485404
+LightGBM,only chest IMU,104,1,0.7653389468016908
+LightGBM,only chest IMU,104,2,0.7599405684076828
+LightGBM,only chest IMU,105,0,0.8304061359945836
+LightGBM,only chest IMU,105,1,0.8263936624079594
+LightGBM,only chest IMU,105,2,0.8293915356260015
+LightGBM,only chest IMU,106,0,0.7398423953670118
+LightGBM,only chest IMU,106,1,0.7482803774961546
+LightGBM,only chest IMU,106,2,0.7406274445053246
+LightGBM,only chest IMU,107,0,0.7699985499178944
+LightGBM,only chest IMU,107,1,0.7638637363605494
+LightGBM,only chest IMU,107,2,0.7676338752781156
+LightGBM,only chest IMU,108,0,0.808454967808633
+LightGBM,only chest IMU,108,1,0.7855498525223922
+LightGBM,only chest IMU,108,2,0.795768988515135
+LightGBM,only heart signal,101,0,0.1642123171588921
+LightGBM,only heart signal,101,1,0.1663476733317281
+LightGBM,only heart signal,101,2,0.1674090674701343
+LightGBM,only heart signal,102,0,0.3018999690338061
+LightGBM,only heart signal,102,1,0.2901412553205257
+LightGBM,only heart signal,102,2,0.2914205117105219
+LightGBM,only heart signal,103,0,0.4249747425441272
+LightGBM,only heart signal,103,1,0.4088096974699747
+LightGBM,only heart signal,103,2,0.4193003837043955
+LightGBM,only heart signal,104,0,0.2899194878468115
+LightGBM,only heart signal,104,1,0.290543062475996
+LightGBM,only heart signal,104,2,0.29267853526803
+LightGBM,only heart signal,105,0,0.3755654399155573
+LightGBM,only heart signal,105,1,0.3755171423582134
+LightGBM,only heart signal,105,2,0.3774538312157168
+LightGBM,only heart signal,106,0,0.2563563900648428
+LightGBM,only heart signal,106,1,0.2433595050865167
+LightGBM,only heart signal,106,2,0.2483805829098495
+LightGBM,only heart signal,107,0,0.200987293346678
+LightGBM,only heart signal,107,1,0.1902417403676927
+LightGBM,only heart signal,107,2,0.1955125982575734
+LightGBM,only heart signal,108,0,0.2905443661525185
+LightGBM,only heart signal,108,1,0.2980253682136041
+LightGBM,only heart signal,108,2,0.2968529231788179
+Extra Trees,all,101,0,0.8584443310878509
+Extra Trees,all,101,1,0.8522226593750437
+Extra Trees,all,101,2,0.8537096144687571
+Extra Trees,all,102,0,0.8569928867884334
+Extra Trees,all,102,1,0.8665985636512068
+Extra Trees,all,102,2,0.8614878377894035
+Extra Trees,all,103,0,0.9076748809782792
+Extra Trees,all,103,1,0.9069047948045534
+Extra Trees,all,103,2,0.9072576606939956
+Extra Trees,all,104,0,0.8936802422934245
+Extra Trees,all,104,1,0.898694846560468
+Extra Trees,all,104,2,0.8893487298427045
+Extra Trees,all,105,0,0.8853372167467312
+Extra Trees,all,105,1,0.8838415581547827
+Extra Trees,all,105,2,0.8844999798381491
+Extra Trees,all,106,0,0.8164387836213423
+Extra Trees,all,106,1,0.8151721726224034
+Extra Trees,all,106,2,0.8134737588342388
+Extra Trees,all,107,0,0.9172669780498854
+Extra Trees,all,107,1,0.9158728423066684
+Extra Trees,all,107,2,0.9182761356872284
+Extra Trees,all,108,0,0.9030179461605248
+Extra Trees,all,108,1,0.9076115709128556
+Extra Trees,all,108,2,0.908802966936855
+Extra Trees,drop chest device,101,0,0.8327464075033487
+Extra Trees,drop chest device,101,1,0.8312891004753288
+Extra Trees,drop chest device,101,2,0.8329096801069187
+Extra Trees,drop chest device,102,0,0.8531408990152158
+Extra Trees,drop chest device,102,1,0.8484788564043712
+Extra Trees,drop chest device,102,2,0.8505422909577455
+Extra Trees,drop chest device,103,0,0.8373931658620808
+Extra Trees,drop chest device,103,1,0.845387292128801
+Extra Trees,drop chest device,103,2,0.8489984741531049
+Extra Trees,drop chest device,104,0,0.9011174931444108
+Extra Trees,drop chest device,104,1,0.9017866452174635
+Extra Trees,drop chest device,104,2,0.90494920575514
+Extra Trees,drop chest device,105,0,0.8591816767249574
+Extra Trees,drop chest device,105,1,0.8618063591901266
+Extra Trees,drop chest device,105,2,0.8586043558219597
+Extra Trees,drop chest device,106,0,0.7735502915607216
+Extra Trees,drop chest device,106,1,0.7747694418228893
+Extra Trees,drop chest device,106,2,0.7743401346201817
+Extra Trees,drop chest device,107,0,0.902211831089316
+Extra Trees,drop chest device,107,1,0.9016187100898954
+Extra Trees,drop chest device,107,2,0.901779230479352
+Extra Trees,drop chest device,108,0,0.8511465479346197
+Extra Trees,drop chest device,108,1,0.8513296444076747
+Extra Trees,drop chest device,108,2,0.847405463635679
+Extra Trees,drop wrist,101,0,0.7803855002346052
+Extra Trees,drop wrist,101,1,0.7874354671039616
+Extra Trees,drop wrist,101,2,0.7785508101561521
+Extra Trees,drop wrist,102,0,0.7253270506939608
+Extra Trees,drop wrist,102,1,0.7244885358258988
+Extra Trees,drop wrist,102,2,0.722693934653117
+Extra Trees,drop wrist,103,0,0.8876091327846474
+Extra Trees,drop wrist,103,1,0.8861476908267478
+Extra Trees,drop wrist,103,2,0.8853781666443435
+Extra Trees,drop wrist,104,0,0.7831850169511816
+Extra Trees,drop wrist,104,1,0.7726318953830423
+Extra Trees,drop wrist,104,2,0.7748485053300096
+Extra Trees,drop wrist,105,0,0.8512527739758083
+Extra Trees,drop wrist,105,1,0.8520994755446855
+Extra Trees,drop wrist,105,2,0.8474024972003757
+Extra Trees,drop wrist,106,0,0.7597197345768637
+Extra Trees,drop wrist,106,1,0.7606369096472779
+Extra Trees,drop wrist,106,2,0.7631520285301745
+Extra Trees,drop wrist,107,0,0.7884233705357225
+Extra Trees,drop wrist,107,1,0.7818041873792652
+Extra Trees,drop wrist,107,2,0.7827832870335795
+Extra Trees,drop wrist,108,0,0.8088857449921306
+Extra Trees,drop wrist,108,1,0.8138512706696804
+Extra Trees,drop wrist,108,2,0.8124469061057759
+Extra Trees,drop ankle,101,0,0.7855095104215192
+Extra Trees,drop ankle,101,1,0.7839863909148646
+Extra Trees,drop ankle,101,2,0.7874209516601728
+Extra Trees,drop ankle,102,0,0.7038967994263737
+Extra Trees,drop ankle,102,1,0.7471645390170986
+Extra Trees,drop ankle,102,2,0.731793219344952
+Extra Trees,drop ankle,103,0,0.8831599707150426
+Extra Trees,drop ankle,103,1,0.8841023873434695
+Extra Trees,drop ankle,103,2,0.8802022164787064
+Extra Trees,drop ankle,104,0,0.7979378616871939
+Extra Trees,drop ankle,104,1,0.8033111688291324
+Extra Trees,drop ankle,104,2,0.8126677125106585
+Extra Trees,drop ankle,105,0,0.8604412329212708
+Extra Trees,drop ankle,105,1,0.8648058866335835
+Extra Trees,drop ankle,105,2,0.86108896092554
+Extra Trees,drop ankle,106,0,0.8064160047811345
+Extra Trees,drop ankle,106,1,0.8065929380698488
+Extra Trees,drop ankle,106,2,0.8060544401181775
+Extra Trees,drop ankle,107,0,0.8943792476495207
+Extra Trees,drop ankle,107,1,0.895341931357379
+Extra Trees,drop ankle,107,2,0.8882474371042868
+Extra Trees,drop ankle,108,0,0.9068612084851928
+Extra Trees,drop ankle,108,1,0.908195239353566
+Extra Trees,drop ankle,108,2,0.9077111822034012
+Extra Trees,only ankle,101,0,0.7031744889332178
+Extra Trees,only ankle,101,1,0.7038729494041966
+Extra Trees,only ankle,101,2,0.70490617985353
+Extra Trees,only ankle,102,0,0.724120705211889
+Extra Trees,only ankle,102,1,0.7139862937702991
+Extra Trees,only ankle,102,2,0.7190575356762822
+Extra Trees,only ankle,103,0,0.6925108016098855
+Extra Trees,only ankle,103,1,0.6899711388406317
+Extra Trees,only ankle,103,2,0.6902524838911004
+Extra Trees,only ankle,104,0,0.6496213715957616
+Extra Trees,only ankle,104,1,0.6374258308526616
+Extra Trees,only ankle,104,2,0.6300615280817932
+Extra Trees,only ankle,105,0,0.5916846534295327
+Extra Trees,only ankle,105,1,0.6016734489774286
+Extra Trees,only ankle,105,2,0.5847421144627498
+Extra Trees,only ankle,106,0,0.6675238662156419
+Extra Trees,only ankle,106,1,0.6771159351491659
+Extra Trees,only ankle,106,2,0.6712701332299004
+Extra Trees,only ankle,107,0,0.725013829063786
+Extra Trees,only ankle,107,1,0.7288588682026781
+Extra Trees,only ankle,107,2,0.7345827343254668
+Extra Trees,only ankle,108,0,0.6385286125963175
+Extra Trees,only ankle,108,1,0.6448043013945166
+Extra Trees,only ankle,108,2,0.6231673092513363
+Extra Trees,only chest device (IMU + heart rate),101,0,0.6420426160498724
+Extra Trees,only chest device (IMU + heart rate),101,1,0.6473676174349896
+Extra Trees,only chest device (IMU + heart rate),101,2,0.6486337275787528
+Extra Trees,only chest device (IMU + heart rate),102,0,0.4092530549120058
+Extra Trees,only chest device (IMU + heart rate),102,1,0.3817165269401517
+Extra Trees,only chest device (IMU + heart rate),102,2,0.3897792767356942
+Extra Trees,only chest device (IMU + heart rate),103,0,0.8806315162784948
+Extra Trees,only chest device (IMU + heart rate),103,1,0.8749922786772062
+Extra Trees,only chest device (IMU + heart rate),103,2,0.8748741743259703
+Extra Trees,only chest device (IMU + heart rate),104,0,0.7463410605853157
+Extra Trees,only chest device (IMU + heart rate),104,1,0.7348749652295645
+Extra Trees,only chest device (IMU + heart rate),104,2,0.7394683730055955
+Extra Trees,only chest device (IMU + heart rate),105,0,0.8268051335380536
+Extra Trees,only chest device (IMU + heart rate),105,1,0.8274483964343847
+Extra Trees,only chest device (IMU + heart rate),105,2,0.8263587461098069
+Extra Trees,only chest device (IMU + heart rate),106,0,0.7639337594999315
+Extra Trees,only chest device (IMU + heart rate),106,1,0.759539105554925
+Extra Trees,only chest device (IMU + heart rate),106,2,0.765758276069031
+Extra Trees,only chest device (IMU + heart rate),107,0,0.7086873412788972
+Extra Trees,only chest device (IMU + heart rate),107,1,0.7073152059069353
+Extra Trees,only chest device (IMU + heart rate),107,2,0.7135090650489965
+Extra Trees,only chest device (IMU + heart rate),108,0,0.848862819040919
+Extra Trees,only chest device (IMU + heart rate),108,1,0.844464084919036
+Extra Trees,only chest device (IMU + heart rate),108,2,0.8563721090971711
+Extra Trees,only wrist,101,0,0.6539578961241004
+Extra Trees,only wrist,101,1,0.6533944419952166
+Extra Trees,only wrist,101,2,0.6654220242635512
+Extra Trees,only wrist,102,0,0.7879899208199728
+Extra Trees,only wrist,102,1,0.7893717874498035
+Extra Trees,only wrist,102,2,0.7874529237048544
+Extra Trees,only wrist,103,0,0.69866642667868
+Extra Trees,only wrist,103,1,0.6952022110088647
+Extra Trees,only wrist,103,2,0.6938790600984981
+Extra Trees,only wrist,104,0,0.696082179177402
+Extra Trees,only wrist,104,1,0.6907782264961758
+Extra Trees,only wrist,104,2,0.6921650782407522
+Extra Trees,only wrist,105,0,0.6484955159034324
+Extra Trees,only wrist,105,1,0.6509436050980749
+Extra Trees,only wrist,105,2,0.6592712588371225
+Extra Trees,only wrist,106,0,0.7272630824621138
+Extra Trees,only wrist,106,1,0.72863858989875
+Extra Trees,only wrist,106,2,0.730365693577261
+Extra Trees,only wrist,107,0,0.7185066119726067
+Extra Trees,only wrist,107,1,0.7203074484597848
+Extra Trees,only wrist,107,2,0.7252149931987293
+Extra Trees,only wrist,108,0,0.8002713852832253
+Extra Trees,only wrist,108,1,0.7887496898384647
+Extra Trees,only wrist,108,2,0.7872574525638963
+Extra Trees,only chest IMU,101,0,0.66120005472784
+Extra Trees,only chest IMU,101,1,0.6567288309017348
+Extra Trees,only chest IMU,101,2,0.6645836457404515
+Extra Trees,only chest IMU,102,0,0.3973569092083234
+Extra Trees,only chest IMU,102,1,0.3990848788184584
+Extra Trees,only chest IMU,102,2,0.3655379685498669
+Extra Trees,only chest IMU,103,0,0.8617080902698521
+Extra Trees,only chest IMU,103,1,0.8629175998109593
+Extra Trees,only chest IMU,103,2,0.864765670570564
+Extra Trees,only chest IMU,104,0,0.7020699637611271
+Extra Trees,only chest IMU,104,1,0.7060950830261069
+Extra Trees,only chest IMU,104,2,0.715720849355278
+Extra Trees,only chest IMU,105,0,0.8098006643723852
+Extra Trees,only chest IMU,105,1,0.8064992719601007
+Extra Trees,only chest IMU,105,2,0.8109569615020025
+Extra Trees,only chest IMU,106,0,0.7452878525144296
+Extra Trees,only chest IMU,106,1,0.7401073156035789
+Extra Trees,only chest IMU,106,2,0.7404078077034143
+Extra Trees,only chest IMU,107,0,0.7565782402227711
+Extra Trees,only chest IMU,107,1,0.7531941794021201
+Extra Trees,only chest IMU,107,2,0.7531999060838245
+Extra Trees,only chest IMU,108,0,0.8400067267487407
+Extra Trees,only chest IMU,108,1,0.8346363599284173
+Extra Trees,only chest IMU,108,2,0.8386895910513211
+Extra Trees,only heart signal,101,0,0.1522553736683465
+Extra Trees,only heart signal,101,1,0.1494648364476653
+Extra Trees,only heart signal,101,2,0.1534965703862012
+Extra Trees,only heart signal,102,0,0.2697785723286857
+Extra Trees,only heart signal,102,1,0.2560320968792137
+Extra Trees,only heart signal,102,2,0.2668476836447183
+Extra Trees,only heart signal,103,0,0.4292181870313127
+Extra Trees,only heart signal,103,1,0.4426554193696208
+Extra Trees,only heart signal,103,2,0.44649136850258
+Extra Trees,only heart signal,104,0,0.3478545551101665
+Extra Trees,only heart signal,104,1,0.3421378052614291
+Extra Trees,only heart signal,104,2,0.342814452023672
+Extra Trees,only heart signal,105,0,0.3945256860383013
+Extra Trees,only heart signal,105,1,0.3953631488153097
+Extra Trees,only heart signal,105,2,0.3888371523905233
+Extra Trees,only heart signal,106,0,0.2942862762140292
+Extra Trees,only heart signal,106,1,0.2928459019455025
+Extra Trees,only heart signal,106,2,0.2815974857193788
+Extra Trees,only heart signal,107,0,0.1567081134105675
+Extra Trees,only heart signal,107,1,0.1638402146056948
+Extra Trees,only heart signal,107,2,0.1565966969582291
+Extra Trees,only heart signal,108,0,0.3369811492467348
+Extra Trees,only heart signal,108,1,0.3358365736398387
+Extra Trees,only heart signal,108,2,0.3327404528673658
+XGBoost,all,101,0,0.7774739146782047
+XGBoost,all,101,1,0.7752261911368435
+XGBoost,all,101,2,0.7788165955021223
+XGBoost,all,102,0,0.7633596883576796
+XGBoost,all,102,1,0.7616234159168648
+XGBoost,all,102,2,0.7561581553178783
+XGBoost,all,103,0,0.9113916912985892
+XGBoost,all,103,1,0.9075156771009036
+XGBoost,all,103,2,0.916016512993916
+XGBoost,all,104,0,0.810368244558445
+XGBoost,all,104,1,0.813463441830365
+XGBoost,all,104,2,0.8154096558094743
+XGBoost,all,105,0,0.9007470529812732
+XGBoost,all,105,1,0.9002606735127218
+XGBoost,all,105,2,0.896650657686652
+XGBoost,all,106,0,0.8243211768397675
+XGBoost,all,106,1,0.8283641985465668
+XGBoost,all,106,2,0.8258373387382351
+XGBoost,all,107,0,0.9012718269955152
+XGBoost,all,107,1,0.8883737032332214
+XGBoost,all,107,2,0.9067175396139338
+XGBoost,all,108,0,0.8847562319584957
+XGBoost,all,108,1,0.8637095616311489
+XGBoost,all,108,2,0.8603628756807454
+XGBoost,drop chest device,101,0,0.7842068339815108
+XGBoost,drop chest device,101,1,0.7715035999182024
+XGBoost,drop chest device,101,2,0.7698826762526393
+XGBoost,drop chest device,102,0,0.862435068194865
+XGBoost,drop chest device,102,1,0.8589602150322674
+XGBoost,drop chest device,102,2,0.8621432297948801
+XGBoost,drop chest device,103,0,0.8275410191737463
+XGBoost,drop chest device,103,1,0.8348515621479248
+XGBoost,drop chest device,103,2,0.8315675650265838
+XGBoost,drop chest device,104,0,0.8537877150977826
+XGBoost,drop chest device,104,1,0.8418104799103823
+XGBoost,drop chest device,104,2,0.8450709501304046
+XGBoost,drop chest device,105,0,0.8630229367956995
+XGBoost,drop chest device,105,1,0.8648321711142013
+XGBoost,drop chest device,105,2,0.8574920648348717
+XGBoost,drop chest device,106,0,0.7969653305954081
+XGBoost,drop chest device,106,1,0.795635169885316
+XGBoost,drop chest device,106,2,0.7971647347472796
+XGBoost,drop chest device,107,0,0.9047566860661456
+XGBoost,drop chest device,107,1,0.8975935000556047
+XGBoost,drop chest device,107,2,0.9030142914717838
+XGBoost,drop chest device,108,0,0.6824417519771558
+XGBoost,drop chest device,108,1,0.6915246968021699
+XGBoost,drop chest device,108,2,0.651337028369196
+XGBoost,drop wrist,101,0,0.7096070787767607
+XGBoost,drop wrist,101,1,0.7044576842498129
+XGBoost,drop wrist,101,2,0.716238298908193
+XGBoost,drop wrist,102,0,0.6570306672964136
+XGBoost,drop wrist,102,1,0.6321554382776221
+XGBoost,drop wrist,102,2,0.6526455449723144
+XGBoost,drop wrist,103,0,0.8503043055281865
+XGBoost,drop wrist,103,1,0.8501924225253676
+XGBoost,drop wrist,103,2,0.8559375814287635
+XGBoost,drop wrist,104,0,0.7703763950738909
+XGBoost,drop wrist,104,1,0.7636987527607578
+XGBoost,drop wrist,104,2,0.7672101923855356
+XGBoost,drop wrist,105,0,0.8533648335248271
+XGBoost,drop wrist,105,1,0.8530559703258436
+XGBoost,drop wrist,105,2,0.8557288690280339
+XGBoost,drop wrist,106,0,0.7475533480192073
+XGBoost,drop wrist,106,1,0.745266138889472
+XGBoost,drop wrist,106,2,0.7466078775298696
+XGBoost,drop wrist,107,0,0.7586448750411686
+XGBoost,drop wrist,107,1,0.7546123419064298
+XGBoost,drop wrist,107,2,0.7625687486316067
+XGBoost,drop wrist,108,0,0.7873135205634588
+XGBoost,drop wrist,108,1,0.7707899488502258
+XGBoost,drop wrist,108,2,0.7893360322606723
+XGBoost,drop ankle,101,0,0.7283900994623279
+XGBoost,drop ankle,101,1,0.7403031283364933
+XGBoost,drop ankle,101,2,0.7308282362288437
+XGBoost,drop ankle,102,0,0.5654897503803303
+XGBoost,drop ankle,102,1,0.5704252468330628
+XGBoost,drop ankle,102,2,0.5645836863736428
+XGBoost,drop ankle,103,0,0.9051805315009958
+XGBoost,drop ankle,103,1,0.9049444384283356
+XGBoost,drop ankle,103,2,0.9022139890264038
+XGBoost,drop ankle,104,0,0.772186528538763
+XGBoost,drop ankle,104,1,0.7694721289813137
+XGBoost,drop ankle,104,2,0.771163941163876
+XGBoost,drop ankle,105,0,0.8776469885903295
+XGBoost,drop ankle,105,1,0.8791266697328212
+XGBoost,drop ankle,105,2,0.8768157072886188
+XGBoost,drop ankle,106,0,0.7975698152487628
+XGBoost,drop ankle,106,1,0.8039904261667871
+XGBoost,drop ankle,106,2,0.7984740721354845
+XGBoost,drop ankle,107,0,0.8733666518021189
+XGBoost,drop ankle,107,1,0.8804894593748824
+XGBoost,drop ankle,107,2,0.883113764129397
+XGBoost,drop ankle,108,0,0.8780138536438225
+XGBoost,drop ankle,108,1,0.888856391341233
+XGBoost,drop ankle,108,2,0.868497193559621
+XGBoost,only ankle,101,0,0.6934563673624653
+XGBoost,only ankle,101,1,0.6825458052830068
+XGBoost,only ankle,101,2,0.6841872792620868
+XGBoost,only ankle,102,0,0.7378879805056827
+XGBoost,only ankle,102,1,0.7315269437738472
+XGBoost,only ankle,102,2,0.7336133231220056
+XGBoost,only ankle,103,0,0.6711826688967004
+XGBoost,only ankle,103,1,0.6750582833898351
+XGBoost,only ankle,103,2,0.6695321646880614
+XGBoost,only ankle,104,0,0.6520402095242754
+XGBoost,only ankle,104,1,0.6468159351411973
+XGBoost,only ankle,104,2,0.6482966433525863
+XGBoost,only ankle,105,0,0.6140520489711762
+XGBoost,only ankle,105,1,0.6100357474939465
+XGBoost,only ankle,105,2,0.6084768910021422
+XGBoost,only ankle,106,0,0.6685005971433151
+XGBoost,only ankle,106,1,0.674358346134968
+XGBoost,only ankle,106,2,0.6747998452128035
+XGBoost,only ankle,107,0,0.7098718675489506
+XGBoost,only ankle,107,1,0.7149024595928122
+XGBoost,only ankle,107,2,0.7167297666138689
+XGBoost,only ankle,108,0,0.4918514138117565
+XGBoost,only ankle,108,1,0.501935186840533
+XGBoost,only ankle,108,2,0.4922575073305772
+XGBoost,only chest device (IMU + heart rate),101,0,0.6428298727734053
+XGBoost,only chest device (IMU + heart rate),101,1,0.6574801746645763
+XGBoost,only chest device (IMU + heart rate),101,2,0.657431474685608
+XGBoost,only chest device (IMU + heart rate),102,0,0.44605972444084624
+XGBoost,only chest device (IMU + heart rate),102,1,0.43741187915289603
+XGBoost,only chest device (IMU + heart rate),102,2,0.43305897169210317
+XGBoost,only chest device (IMU + heart rate),103,0,0.8772405069543567
+XGBoost,only chest device (IMU + heart rate),103,1,0.8805942587969317
+XGBoost,only chest device (IMU + heart rate),103,2,0.8784829979704813
+XGBoost,only chest device (IMU + heart rate),104,0,0.7367818620947569
+XGBoost,only chest device (IMU + heart rate),104,1,0.7281148128654873
+XGBoost,only chest device (IMU + heart rate),104,2,0.7366649490770818
+XGBoost,only chest device (IMU + heart rate),105,0,0.8545920961174467
+XGBoost,only chest device (IMU + heart rate),105,1,0.850690295132169
+XGBoost,only chest device (IMU + heart rate),105,2,0.851955081271537
+XGBoost,only chest device (IMU + heart rate),106,0,0.7533077301660259
+XGBoost,only chest device (IMU + heart rate),106,1,0.7636639164201672
+XGBoost,only chest device (IMU + heart rate),106,2,0.7608804559793639
+XGBoost,only chest device (IMU + heart rate),107,0,0.7201743496261105
+XGBoost,only chest device (IMU + heart rate),107,1,0.7206408631822008
+XGBoost,only chest device (IMU + heart rate),107,2,0.7150749877181061
+XGBoost,only chest device (IMU + heart rate),108,0,0.8522296900924412
+XGBoost,only chest device (IMU + heart rate),108,1,0.8545860595303529
+XGBoost,only chest device (IMU + heart rate),108,2,0.8546710927348911
+XGBoost,only wrist,101,0,0.6661506971570009
+XGBoost,only wrist,101,1,0.6493740786378083
+XGBoost,only wrist,101,2,0.6514954211188184
+XGBoost,only wrist,102,0,0.7740709949576532
+XGBoost,only wrist,102,1,0.7704553414451505
+XGBoost,only wrist,102,2,0.7753981820993888
+XGBoost,only wrist,103,0,0.7654976599806033
+XGBoost,only wrist,103,1,0.750766976586364
+XGBoost,only wrist,103,2,0.7580747635947588
+XGBoost,only wrist,104,0,0.7056229018091862
+XGBoost,only wrist,104,1,0.6975283480340151
+XGBoost,only wrist,104,2,0.6955807396543717
+XGBoost,only wrist,105,0,0.6009181930455282
+XGBoost,only wrist,105,1,0.6115850983362028
+XGBoost,only wrist,105,2,0.6020201716365593
+XGBoost,only wrist,106,0,0.7334791746391468
+XGBoost,only wrist,106,1,0.7267712984142256
+XGBoost,only wrist,106,2,0.7282528987618012
+XGBoost,only wrist,107,0,0.8482633716582311
+XGBoost,only wrist,107,1,0.848791425273335
+XGBoost,only wrist,107,2,0.8488907737892195
+XGBoost,only wrist,108,0,0.5726422383331706
+XGBoost,only wrist,108,1,0.5775046496437825
+XGBoost,only wrist,108,2,0.5733891910102688
+XGBoost,only chest IMU,101,0,0.6564721499910459
+XGBoost,only chest IMU,101,1,0.6565905969694528
+XGBoost,only chest IMU,101,2,0.6588723055010216
+XGBoost,only chest IMU,102,0,0.40147652479967805
+XGBoost,only chest IMU,102,1,0.41167283639951785
+XGBoost,only chest IMU,102,2,0.40501321271312235
+XGBoost,only chest IMU,103,0,0.8686277930999924
+XGBoost,only chest IMU,103,1,0.8676730193411435
+XGBoost,only chest IMU,103,2,0.8691132944111392
+XGBoost,only chest IMU,104,0,0.7607819512198628
+XGBoost,only chest IMU,104,1,0.7553612119790254
+XGBoost,only chest IMU,104,2,0.7563355329441667
+XGBoost,only chest IMU,105,0,0.8273242877287558
+XGBoost,only chest IMU,105,1,0.829579499040157
+XGBoost,only chest IMU,105,2,0.8296887802075487
+XGBoost,only chest IMU,106,0,0.7417998743938465
+XGBoost,only chest IMU,106,1,0.7468567375465534
+XGBoost,only chest IMU,106,2,0.7489542902922995
+XGBoost,only chest IMU,107,0,0.7691475759695934
+XGBoost,only chest IMU,107,1,0.7754446170655438
+XGBoost,only chest IMU,107,2,0.7644856467872988
+XGBoost,only chest IMU,108,0,0.8358142328860444
+XGBoost,only chest IMU,108,1,0.8322223016993863
+XGBoost,only chest IMU,108,2,0.8387876926949325
+XGBoost,only heart signal,101,0,0.17440746332443066
+XGBoost,only heart signal,101,1,0.17305118953051446
+XGBoost,only heart signal,101,2,0.1738046998846079
+XGBoost,only heart signal,102,0,0.27627936261471303
+XGBoost,only heart signal,102,1,0.27445636278204283
+XGBoost,only heart signal,102,2,0.2748118312566343
+XGBoost,only heart signal,103,0,0.4698759436281403
+XGBoost,only heart signal,103,1,0.4649302693388435
+XGBoost,only heart signal,103,2,0.4650595246110958
+XGBoost,only heart signal,104,0,0.29571296246558065
+XGBoost,only heart signal,104,1,0.29228368355503564
+XGBoost,only heart signal,104,2,0.29335291943082953
+XGBoost,only heart signal,105,0,0.41899804730719986
+XGBoost,only heart signal,105,1,0.41921829299829505
+XGBoost,only heart signal,105,2,0.41908015208089283
+XGBoost,only heart signal,106,0,0.2591596422396855
+XGBoost,only heart signal,106,1,0.25867957404355263
+XGBoost,only heart signal,106,2,0.2588005642670821
+XGBoost,only heart signal,107,0,0.20076711699213687
+XGBoost,only heart signal,107,1,0.19723907262278495
+XGBoost,only heart signal,107,2,0.1951979785027499
+XGBoost,only heart signal,108,0,0.3218899572790172
+XGBoost,only heart signal,108,1,0.32031859665884005
+XGBoost,only heart signal,108,2,0.3217523859029782
