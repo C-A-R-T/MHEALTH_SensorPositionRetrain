@@ -11,7 +11,7 @@ duckdb==1.5.6        # chay sql/queries.sql
 # mo hinh
 scikit-learn==1.9.1  # Logistic, SVM, k-NN, cay, RF, ET, HistGB, MLP, permutation
 lightgbm==4.7.0
-xgboost==3.2.0
+xgboost==3.4.1
 
 # giai thich va thong ke
 shap==0.51.0         # TreeSHAP, KernelSHAP
