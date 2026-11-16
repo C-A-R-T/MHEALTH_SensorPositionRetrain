@@ -143,6 +143,8 @@ Open the notebooks in VS Code (Jupyter extension) or Jupyter, and run them in th
 
 3. **`Notebook_C_PAMAP2_ExternalCheck_executed.ipynb`** (optional, about 1.5 h on 2 CPU cores): downloads PAMAP2 from UCI (about 690 MB), cuts windows and repeats the position, ROAR, mutual-information and TOST experiments. Results are saved to `report/pamap2_*.csv` and resumed from there.
 
+4. **`Notebook_D_Paper_Figures_executed.ipynb`** (about 1 min, no training): draws every figure and table of the paper and the slides from the CSV files in `report/`, so the paper always shows the numbers in this repository.
+
 On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90450e7650e80612e8e9`.
 
 ## 7. Repository layout
@@ -151,6 +153,7 @@ On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90
 ├── Notebook_A_MHEALTH_SensorPositionRetrain.ipynb            data, cleaning, SQL, RQ1
 ├── Notebook_B_MHEALTH_SensorPositionRetrain_executed.ipynb   classifiers (RQ2), explanations (RQ3)
 ├── Notebook_C_PAMAP2_ExternalCheck_executed.ipynb            external check on PAMAP2
+├── Notebook_D_Paper_Figures_executed.ipynb                   paper and slide figures from report/*.csv
 ├── sql/queries.sql                  queries Q1–Q5 (DuckDB)
 ├── data/processed/manifest.json     rows, columns and md5 of the handover file
 ├── report/
@@ -165,6 +168,8 @@ On a correct run, the md5 of `data/processed/mhealth.parquet` is `3d81b90d136d90
 │   ├── table_rq3_group_share.csv, table_rq3_methods.csv, table_top10_by_method.csv
 │   ├── pamap2_*.csv, fig_pamap2_positions_3models.png   external check on PAMAP2
 │   ├── table_external_check.csv                   MHEALTH vs PAMAP2: cost of dropping each position
+│   ├── paper/                                     Fig. 1-6 and Tables I-III (tables_paper.tex) of the paper
+│   ├── slides/                                    the same results with large fonts for the talk
 │   ├── table_diagnosis.csv                        causes of the largest errors, with evidence
 │   └── fig_*.png                                  figures
 └── requirements.txt                 library versions that ran both notebooks
